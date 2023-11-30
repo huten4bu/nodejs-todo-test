@@ -1,0 +1,27 @@
+<nav class="navbar navbar-extend-sm navbar-dark bg-secondary">
+	<ul class="navbar-nav" style="flex-direction: row;>
+    <li class="navbar-item active">
+      <a class="navbar-brand" href="/">Top</a>
+    </li>
+    <li class="navbar-item active">
+      <a class="navbar-brand" href="/add">Add</a>
+    </li>
+    <li class="navbar-item active">
+      <a class="navbar-brand" href="/user">User</a>
+    </li>
+    <li class="navbar-item active">
+      <a class="navbar-brand" href="/users/login">login</a>
+    </li>
+    <li class="navbar-item active">
+      <a class="navbar-brand" href="/users/logout">logout</a>
+    </li>
+    <% if (login != undefined && login.role == 'admin'){ %>
+    <li class="navbar-item active">
+      <a class="navbar-brand" href="/users/admin">admin</a>
+    </li>
+    <li class="navbar-item active">
+      <a class="navbar-brand" href="/users/admin2">admin2</a>
+    </li>
+    <% } %>
+  </ul>
+</nav>

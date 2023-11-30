@@ -1,0 +1,22 @@
+<%- include('./header') %>
+
+<p class="h5 mt-4">Add new user.</p>
+<form method="post" action="/users/admin">
+	<div class="form-group">
+		<label for="account">Account</label>
+		<input type="mail" id="account" name="account" class="form-control">
+	</div>
+	<div class="form-group">
+		<label for="password">Password</label>
+		<input type="text" id="password" name="password" class="form-control">
+	</div>
+	<div class="form-group">
+		<label for="name">Name</label>
+		<input type="text" id="name" name="name" class="form-control">
+	</div>
+	<div class="form-group">
+		<input type="submit" class="btn btn-primary">
+	</div>
+</form>
+
+<%- include('./footer') %>

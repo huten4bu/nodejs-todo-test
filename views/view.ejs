@@ -1,0 +1,30 @@
+<%- include('./header') %>
+
+<script>
+function complete(id){
+  let result = window.confirm("このToDoを完了にしますか（完了すると非表示になります）。")
+  if(result == true){
+    window.location = '/complete?id=' + id;
+  }
+}
+</script>
+<p>Show id = <%=data.id %></p>
+
+<ol class="list-group">
+  <li class="list-group-item h4">
+    <%=data.title%>
+  </li>
+  <li class="list-group-item">
+    <%-data.memo.split(/\r\n|\n|\r/).join('<br>') %>
+  </li>
+  <li class="list-group-item text-center">
+    終了日時: <%=data["datetime(finished,'+9 hours')"] %>
+  </li>
+  <li class="list-group-item text-center">
+    <a class="btn btn-primary" 
+      href="javascript:complete(<%=data.id %>)">
+      Completed!!</a>
+  </li>
+</ol>
+
+<%- include('./footer') %>
